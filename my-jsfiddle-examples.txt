@@ -1,0 +1,12 @@
+es6 simple examples:
+......................... 
+i. http://www.es6fiddle.net/ifh28ryl/ - let
+ii. http://www.es6fiddle.net/if9oz820/ - let vs var
+iii. http://www.es6fiddle.net/if9pjg65/ - classes, methods and object instantiation
+iv. http://www.es6fiddle.net/if9rgbxa/  - template strings
+v. http://www.es6fiddle.net/if9sggpw/ - Accessing object definitions
+vi. http://www.es6fiddle.net/ifh1r7lv/  - destructurin
+vii. http://www.es6fiddle.net/if9t0vsc/ - using defaults 
+viii. http://www.es6fiddle.net/if9thgxq/ - the Magic 3 dots 
+ix. http://www.es6fiddle.net/ifh1r7lv/ - name spacing
+ 

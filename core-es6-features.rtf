@@ -1,0 +1,1874 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;\f2\fnil\fcharset0 LucidaGrande;
+\f3\fmodern\fcharset0 Courier-Bold;\f4\fmodern\fcharset0 Courier-Oblique;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue233;\red15\green112\blue1;\red83\green83\blue83;
+\red51\green110\blue109;\red251\green0\blue7;\red255\green255\blue84;\red169\green14\blue26;\red171\green79\blue117;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid2\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl420\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \expnd0\expndtw0\kerning0
+4. Core ES6 features \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 This chapter describes the core ES6 features. These features are easy to adopt; the remaining features are mainly of interest to library authors. I explain each feature via the corresponding ES5 code.\
+\pard\pardeftab720\li1200\ri1200\sl280\sa240\partightenfactor0
+\cf0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.1. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_from-var-to-const"}}{\fldrslt \cf2 From 
+\f1 var
+\f0  to 
+\f1 const
+\f0 /
+\f1 let}}\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.2. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_from-iifes-to-blocks"}}{\fldrslt \cf2 From IIFEs to blocks}}\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.3. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_from-str-concat-to-tmpl-lit"}}{\fldrslt \cf2 From concatenating strings to template literals\
+}}\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl280\partightenfactor0
+\ls1\ilvl1\cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+4.3.1. String interpolation\
+\ls1\ilvl1\kerning1\expnd0\expndtw0 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+4.3.2. Multi-line strings\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.4. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_from-func-expr-to-arrow-func"}}{\fldrslt \cf2 From function expressions to arrow functions}}\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.5. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_multiple-return-values-core-feature"}}{\fldrslt \cf2 Handling multiple return values\
+}}\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl280\partightenfactor0
+\ls1\ilvl1\cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+4.5.1. Multiple return values via arrays\
+\ls1\ilvl1\kerning1\expnd0\expndtw0 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+4.5.2. Multiple return values via objects\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.6. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_for-foreach-forof"}}{\fldrslt \cf2 From 
+\f1 for
+\f0  to 
+\f1 forEach()
+\f0  to 
+\f1 for-of}}\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.7. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_param-defaults-core-feature"}}{\fldrslt \cf2 Handling parameter default values}}\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.8. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_named-params-core-feature"}}{\fldrslt \cf2 Handling named parameters\
+}}\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl280\partightenfactor0
+\ls1\ilvl1\cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+4.8.1. Making the parameter optional\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.9. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_from-arguments-to-rest"}}{\fldrslt \cf2 From 
+\f1 arguments
+\f0  to rest parameters}}\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.10. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_from-apply-to-spread"}}{\fldrslt \cf2 From 
+\f1 apply()
+\f0  to the spread operator (
+\f1 ...
+\f0 )\
+}}\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl280\partightenfactor0
+\ls1\ilvl1\cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+4.10.1. 
+\f1 Math.max()
+\f0 \
+\ls1\ilvl1\kerning1\expnd0\expndtw0 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+4.10.2. 
+\f1 Array.prototype.push()
+\f0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.11. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_from-concat-to-spread"}}{\fldrslt \cf2 From 
+\f1 concat()
+\f0  to the spread operator (
+\f1 ...
+\f0 )}}\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.12. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_from-func-expr-to-method-def"}}{\fldrslt \cf2 From function expressions in object literals to method definitions}}\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.13. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_from-constr-to-class"}}{\fldrslt \cf2 From constructors to classes\
+}}\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl280\partightenfactor0
+\ls1\ilvl1\cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+4.13.1. Base classes\
+\ls1\ilvl1\kerning1\expnd0\expndtw0 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+4.13.2. Derived classes\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.14. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_from-custom-error-to-error-subclass"}}{\fldrslt \cf2 From custom error constructors to subclasses of 
+\f1 Error}}\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.15. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_from-obj-to-map"}}{\fldrslt \cf2 From objects to Maps}}\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.16. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_new-str-methods-core-feature"}}{\fldrslt \cf2 New string methods}}\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.17. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_new-array-methods-core-feature"}}{\fldrslt \cf2 New Array methods\
+}}\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl280\partightenfactor0
+\ls1\ilvl1\cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+4.17.1. From 
+\f1 Array.prototype.indexOf
+\f0  to 
+\f1 Array.prototype.findIndex
+\f0 \
+\ls1\ilvl1\kerning1\expnd0\expndtw0 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+4.17.2. From 
+\f1 Array.prototype.slice()
+\f0  to 
+\f1 Array.from()
+\f0  or the spread operator\
+\ls1\ilvl1\kerning1\expnd0\expndtw0 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+4.17.3. From 
+\f1 apply()
+\f0  to 
+\f1 Array.prototype.fill()
+\f0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.18. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_from-cjs-to-esm"}}{\fldrslt \cf2 From CommonJS modules to ES6 modules\
+}}\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl280\partightenfactor0
+\ls1\ilvl1\cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+4.18.1. Multiple exports\
+\ls1\ilvl1\kerning1\expnd0\expndtw0 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+4.18.2. Single exports\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+4.19. {\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_core-features.html#sec_what-next-core-features"}}{\fldrslt \cf2 What to do next}}\
+\pard\pardeftab720\li1200\ri1200\sl280\sa240\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 4.1 From 
+\f3 var
+\f0  to 
+\f3 const
+\f0 /
+\f3 let
+\f0  \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 In ES5, you declare variables via 
+\f1 var
+\f0 . Such variables are 
+\i function-scoped
+\i0 , their scopes are the innermost enclosing functions. The behavior of 
+\f1 var
+\f0  is occasionally confusing. This is an example:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 var
+\f1\b0 \cf0  x \cf4 =\cf0  \cf4 3\cf0 ;\
+
+\f3\b \cf3 function
+\f1\b0 \cf0  func(randomize) \{\
+    
+\f3\b \cf3 if
+\f1\b0 \cf0  (randomize) \{\
+        
+\f3\b \cf3 var
+\f1\b0 \cf0  x \cf4 =\cf0  \cf3 Math\cf0 .random(); 
+\f4\i \cf5 // (A) scope: whole function
+\f1\i0 \cf0 \
+        
+\f3\b \cf3 return
+\f1\b0 \cf0  x;\
+    \}\
+    
+\f3\b \cf3 return
+\f1\b0 \cf0  x; 
+\f4\i \cf5 // accesses the x from line A
+\f1\i0 \cf0 \
+\}\
+func(
+\f3\b \cf3 false
+\f1\b0 \cf0 ); 
+\f4\i \cf5 // undefined
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 That 
+\f1 func()
+\f0  returns 
+\f1 undefined
+\f0  may be surprising. You can see why if you rewrite the code so that it more closely reflects what is actually going on:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 var
+\f1\b0 \cf0  x \cf4 =\cf0  \cf4 3\cf0 ;\
+
+\f3\b \cf3 function
+\f1\b0 \cf0  func(randomize) \{\
+    
+\f3\b \cf3 var
+\f1\b0 \cf0  x;\
+    
+\f3\b \cf3 if
+\f1\b0 \cf0  (randomize) \{\
+        x \cf4 =\cf0  \cf3 Math\cf0 .random();\
+        
+\f3\b \cf3 return
+\f1\b0 \cf0  x;\
+    \}\
+    
+\f3\b \cf3 return
+\f1\b0 \cf0  x;\
+\}\
+func(
+\f3\b \cf3 false
+\f1\b0 \cf0 ); 
+\f4\i \cf5 // undefined
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 In ES6, you can additionally declare variables via 
+\f1 let
+\f0  and 
+\f1 const
+\f0 . Such variables are 
+\i block-scoped
+\i0 , their scopes are the innermost enclosing blocks. 
+\f1 let
+\f0  is roughly a block-scoped version of 
+\f1 var
+\f0 . 
+\f1 const
+\f0  works like 
+\f1 let
+\f0 , but creates variables whose values can\'92t be changed.\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f1 \cf0 let
+\f0  and 
+\f1 const
+\f0  behave more strictly and throw more exceptions (e.g. when you access their variables inside their scope before they are declared). Block-scoping helps with keeping the effects of code fragments more local (see the next section for a demonstration). And it\'92s more mainstream than function-scoping, which eases moving between JavaScript and other programming languages.\
+If you replace 
+\f1 var
+\f0  with 
+\f1 let
+\f0  in the initial version, you get different behavior:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 let
+\f1\b0 \cf0  x \cf4 =\cf0  \cf4 3\cf0 ;\
+
+\f3\b \cf3 function
+\f1\b0 \cf0  func(randomize) \{\
+    
+\f3\b \cf3 if
+\f1\b0 \cf0  (randomize) \{\
+        
+\f3\b \cf3 let
+\f1\b0 \cf0  x \cf4 =\cf0  \cf3 Math\cf0 .random();\
+        
+\f3\b \cf3 return
+\f1\b0 \cf0  x;\
+    \}\
+    
+\f3\b \cf3 return
+\f1\b0 \cf0  x;\
+\}\
+func(
+\f3\b \cf3 false
+\f1\b0 \cf0 ); 
+\f4\i \cf5 // 3
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 That means that you can\'92t blindly replace 
+\f1 var
+\f0  with 
+\f1 let
+\f0  or 
+\f1 const
+\f0  in existing code; you have to be careful during refactoring.\
+My advice is:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\partightenfactor0
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+Prefer 
+\f1 const
+\f0 . You can use it for all variables whose values never change.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+Otherwise, use 
+\f1 let
+\f0  \'96 for variables whose values do change.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+Avoid 
+\f1 var
+\f0 .\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf0 More information:
+\b0  chapter \'93{\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_variables.html#ch_variables"}}{\fldrslt \cf2 Variables and scoping}}\'94.\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 4.2 From IIFEs to blocks \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 In ES5, you had to use a pattern called IIFE (Immediately-Invoked Function Expression) if you wanted to restrict the scope of a variable 
+\f1 tmp
+\f0  to a block:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\fs28 \cf0 (
+\f3\b \cf3 function
+\f1\b0 \cf0  () \{  
+\f4\i \cf5 // open IIFE
+\f1\i0 \cf0 \
+    
+\f3\b \cf3 var
+\f1\b0 \cf0  tmp \cf4 =\cf0  \cf6 \'b7\'b7\'b7\cf0 ;\
+    \cf6 \'b7\'b7\'b7\cf0 \
+\}());  
+\f4\i \cf5 // close IIFE
+\f1\i0 \cf0 \
+\
+console.log(tmp); 
+\f4\i \cf5 // ReferenceError
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 In ECMAScript 6, you can simply use a block and a 
+\f1 let
+\f0  declaration (or a 
+\f1 const
+\f0 declaration):\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\fs28 \cf0 \{  
+\f4\i \cf5 // open block
+\f1\i0 \cf0 \
+    
+\f3\b \cf3 let
+\f1\b0 \cf0  tmp \cf4 =\cf0  \cf6 \'b7\'b7\'b7\cf0 ;\
+    \cf6 \'b7\'b7\'b7\cf0 \
+\}  
+\f4\i \cf5 // close block
+\f1\i0 \cf0 \
+\
+console.log(tmp); 
+\f4\i \cf5 // ReferenceError
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 More information:
+\b0  section \'93{\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_callables.html#sec_iifes-in-es6"}}{\fldrslt \cf2 Avoid IIFEs in ES6}}\'94.\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 \cb7 4.3 From concatenating strings to template literals \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 \cb1 With ES6, JavaScript finally gets literals for string interpolation and multi-line strings.\
+\pard\pardeftab720\sl280\sa319\partightenfactor0
+
+\b \cf0 4.3.1 String interpolation \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0 \cf0 In ES5, you put values into strings by concatenating those values and string fragments:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  printCoord(x, y) \{\
+    console.log(\cf8 '('\cf4 +\cf0 x\cf4 +\cf8 ', '\cf4 +\cf0 y\cf4 +\cf8 ')'\cf0 );\
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 In ES6 you can use string interpolation via template literals:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  printCoord(x, y) \{\
+    console.log(\cf8 `(
+\f3\b \cf9 $\{
+\f1\b0 \cf0 x
+\f3\b \cf9 \}
+\f1\b0 \cf8 , 
+\f3\b \cf9 $\{
+\f1\b0 \cf0 y
+\f3\b \cf9 \}
+\f1\b0 \cf8 )`\cf0 );\
+\}\
+\pard\pardeftab720\sl280\sa319\partightenfactor0
+
+\f0\b\fs24 \cf0 4.3.2 Multi-line strings \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0 \cf0 Template literals also help with representing multi-line strings.\
+For example, this is what you have to do to represent one in ES5:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 var
+\f1\b0 \cf0  HTML5_SKELETON \cf4 =\cf0 \
+    \cf8 '<!doctype html>\\n'\cf0  \cf4 +\cf0 \
+    \cf8 '<html>\\n'\cf0  \cf4 +\cf0 \
+    \cf8 '<head>\\n'\cf0  \cf4 +\cf0 \
+    \cf8 '    <meta charset="UTF-8">\\n'\cf0  \cf4 +\cf0 \
+    \cf8 '    <title></title>\\n'\cf0  \cf4 +\cf0 \
+    \cf8 '</head>\\n'\cf0  \cf4 +\cf0 \
+    \cf8 '<body>\\n'\cf0  \cf4 +\cf0 \
+    \cf8 '</body>\\n'\cf0  \cf4 +\cf0 \
+    \cf8 '</html>\\n'\cf0 ;\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 If you escape the newlines via backslashes, things look a bit nicer (but you still have to explicitly add newlines):\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 var
+\f1\b0 \cf0  HTML5_SKELETON \cf4 =\cf0  \cf8 '\\\cf0 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf8     <!doctype html>\\n\\\cf0 \
+\cf8     <html>\\n\\\cf0 \
+\cf8     <head>\\n\\\cf0 \
+\cf8         <meta charset="UTF-8">\\n\\\cf0 \
+\cf8         <title></title>\\n\\\cf0 \
+\cf8     </head>\\n\\\cf0 \
+\cf8     <body>\\n\\\cf0 \
+\cf8     </body>\\n\\\cf0 \
+\cf8     </html>'\cf0 ;\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 ES6 template literals can span multiple lines:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 const
+\f1\b0 \cf0  HTML5_SKELETON \cf4 =\cf0  \cf8 `\cf0 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf8     <!doctype html>\cf0 \
+\cf8     <html>\cf0 \
+\cf8     <head>\cf0 \
+\cf8         <meta charset="UTF-8">\cf0 \
+\cf8         <title></title>\cf0 \
+\cf8     </head>\cf0 \
+\cf8     <body>\cf0 \
+\cf8     </body>\cf0 \
+\cf8     </html>`\cf0 ;\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 (The examples differ in how much whitespace is included, but that doesn\'92t matter in this case.)\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf0 More information:
+\b0  chapter \'93{\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_template-literals.html#ch_template-literals"}}{\fldrslt \cf2 Template literals and tagged templates}}\'94.\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 4.4 From function expressions to arrow functions \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 In current ES5 code, you have to be careful with 
+\f1 this
+\f0  whenever you are using function expressions. In the following example, I create the helper variable 
+\f1 _this
+\f0 (line A) so that the 
+\f1 this
+\f0  of 
+\f1 UiComponent
+\f0  can be accessed in line B.\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  UiComponent() \{\
+    
+\f3\b \cf3 var
+\f1\b0 \cf0  _this \cf4 =\cf0  
+\f3\b \cf3 this
+\f1\b0 \cf0 ; 
+\f4\i \cf5 // (A)
+\f1\i0 \cf0 \
+    
+\f3\b \cf3 var
+\f1\b0 \cf0  button \cf4 =\cf0  \cf3 document\cf0 .getElementById(\cf8 'myButton'\cf0 );\
+    button.addEventListener(\cf8 'click'\cf0 , 
+\f3\b \cf3 function
+\f1\b0 \cf0  () \{\
+        console.log(\cf8 'CLICK'\cf0 );\
+        _this.handleClick(); 
+\f4\i \cf5 // (B)
+\f1\i0 \cf0 \
+    \});\
+\}\
+UiComponent.prototype.handleClick \cf4 =\cf0  
+\f3\b \cf3 function
+\f1\b0 \cf0  () \{\
+    \cf6 \'b7\'b7\'b7\cf0 \
+\};\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 In ES6, you can use arrow functions, which don\'92t shadow 
+\f1 this
+\f0  (line A):\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  UiComponent() \{\
+    
+\f3\b \cf3 var
+\f1\b0 \cf0  button \cf4 =\cf0  \cf3 document\cf0 .getElementById(\cf8 'myButton'\cf0 );\
+    button.addEventListener(\cf8 'click'\cf0 , () \cf4 =>\cf0  \{\
+        console.log(\cf8 'CLICK'\cf0 );\
+        
+\f3\b \cf3 this
+\f1\b0 \cf0 .handleClick(); 
+\f4\i \cf5 // (A)
+\f1\i0 \cf0 \
+    \});\
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 (In ES6, you also have the option of using a class instead of a constructor function. That is explored later.)\
+Arrow functions are especially handy for short callbacks that only return results of expressions.\
+In ES5, such callbacks are relatively verbose:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 var
+\f1\b0 \cf0  arr \cf4 =\cf0  [\cf4 1\cf0 , \cf4 2\cf0 , \cf4 3\cf0 ];\
+
+\f3\b \cf3 var
+\f1\b0 \cf0  squares \cf4 =\cf0  arr.map(
+\f3\b \cf3 function
+\f1\b0 \cf0  (x) \{ 
+\f3\b \cf3 return
+\f1\b0 \cf0  x \cf4 *\cf0  x \});\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 In ES6, arrow functions are much more concise:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 const
+\f1\b0 \cf0  arr \cf4 =\cf0  [\cf4 1\cf0 , \cf4 2\cf0 , \cf4 3\cf0 ];\
+
+\f3\b \cf3 const
+\f1\b0 \cf0  squares \cf4 =\cf0  arr.map(x \cf4 =>\cf0  x \cf4 *\cf0  x);\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 When defining parameters, you can even omit parentheses if the parameters are just a single identifier. Thus: 
+\f1 (x) => x * x
+\f0  and 
+\f1 x => x * x
+\f0  are both allowed.\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf0 More information:
+\b0  chapter \'93{\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_arrow-functions.html#ch_arrow-functions"}}{\fldrslt \cf2 Arrow functions}}\'94.\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 4.5 Handling multiple return values \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 Some functions or methods return multiple values via arrays or objects. In ES5, you always need to create intermediate variables if you want to access those values. In ES6, you can avoid intermediate variables via destructuring.\
+\pard\pardeftab720\sl280\sa319\partightenfactor0
+
+\b \cf0 4.5.1 Multiple return values via arrays \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f1\b0 \cf0 exec()
+\f0  returns captured groups via an Array-like object. In ES5, you need an intermediate variable (
+\f1 matchObj
+\f0  in the example below), even if you are only interested in the groups:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 var
+\f1\b0 \cf0  matchObj \cf4 =\cf0 \
+    \cf9 /^(\\d\\d\\d\\d)-(\\d\\d)-(\\d\\d)$/\cf0 \
+    .exec(\cf8 '2999-12-31'\cf0 );\
+
+\f3\b \cf3 var
+\f1\b0 \cf0  year \cf4 =\cf0  matchObj[\cf4 1\cf0 ];\
+
+\f3\b \cf3 var
+\f1\b0 \cf0  month \cf4 =\cf0  matchObj[\cf4 2\cf0 ];\
+
+\f3\b \cf3 var
+\f1\b0 \cf0  day \cf4 =\cf0  matchObj[\cf4 3\cf0 ];\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 In ES6, destructuring makes this code simpler:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 const
+\f1\b0 \cf0  [, year, month, day] \cf4 =\cf0 \
+    \cf9 /^(\\d\\d\\d\\d)-(\\d\\d)-(\\d\\d)$/\cf0 \
+    .exec(\cf8 '2999-12-31'\cf0 );\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 The empty slot at the beginning of the Array pattern skips the Array element at index zero.\
+\pard\pardeftab720\sl280\sa319\partightenfactor0
+
+\b \cf0 4.5.2 Multiple return values via objects \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0 \cf0 The method 
+\f1 Object.getOwnPropertyDescriptor()
+\f0  returns a 
+\i property descriptor
+\i0 , an object that holds multiple values in its properties.\
+In ES5, even if you are only interested in the properties of an object, you still need an intermediate variable (
+\f1 propDesc
+\f0  in the example below):\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 var
+\f1\b0 \cf0  obj \cf4 =\cf0  \{ foo\cf4 :\cf0  \cf4 123\cf0  \};\
+\
+
+\f3\b \cf3 var
+\f1\b0 \cf0  propDesc \cf4 =\cf0  \cf3 Object\cf0 .getOwnPropertyDescriptor(obj, \cf8 'foo'\cf0 );\
+
+\f3\b \cf3 var
+\f1\b0 \cf0  writable \cf4 =\cf0  propDesc.writable;\
+
+\f3\b \cf3 var
+\f1\b0 \cf0  configurable \cf4 =\cf0  propDesc.configurable;\
+\
+console.log(writable, configurable); 
+\f4\i \cf5 // true true
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 In ES6, you can use destructuring:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 const
+\f1\b0 \cf0  obj \cf4 =\cf0  \{ foo\cf4 :\cf0  \cf4 123\cf0  \};\
+\
+
+\f3\b \cf3 const
+\f1\b0 \cf0  \{writable, configurable\} \cf4 =\cf0 \
+    \cf3 Object\cf0 .getOwnPropertyDescriptor(obj, \cf8 'foo'\cf0 );\
+\
+console.log(writable, configurable); 
+\f4\i \cf5 // true true
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\fs24 \cf0 \{writable, configurable\}
+\f0  is an abbreviation for:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\fs28 \cf0 \{ writable\cf4 :\cf0  writable, configurable\cf4 :\cf0  configurable \}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 More information:
+\b0  chapter \'93{\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_destructuring.html#ch_destructuring"}}{\fldrslt \cf2 Destructuring}}\'94.\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 4.6 From 
+\f3 for
+\f0  to 
+\f3 forEach()
+\f0  to 
+\f3 for-of
+\f0  \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 Prior to ES5, you iterated over Arrays as follows:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 var
+\f1\b0 \cf0  arr \cf4 =\cf0  [\cf8 'a'\cf0 , \cf8 'b'\cf0 , \cf8 'c'\cf0 ];\
+
+\f3\b \cf3 for
+\f1\b0 \cf0  (
+\f3\b \cf3 var
+\f1\b0 \cf0  i\cf4 =0\cf0 ; i\cf4 <\cf0 arr.length; i\cf4 ++\cf0 ) \{\
+    
+\f3\b \cf3 var
+\f1\b0 \cf0  elem \cf4 =\cf0  arr[i];\
+    console.log(elem);\
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 In ES5, you have the option of using the Array method 
+\f1 forEach()
+\f0 :\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\fs28 \cf0 arr.forEach(
+\f3\b \cf3 function
+\f1\b0 \cf0  (elem) \{\
+    console.log(elem);\
+\});\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 A 
+\f1 for
+\f0  loop has the advantage that you can break from it, 
+\f1 forEach()
+\f0  has the advantage of conciseness.\
+In ES6, the 
+\f1 for-of
+\f0  loop combines both advantages:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 const
+\f1\b0 \cf0  arr \cf4 =\cf0  [\cf8 'a'\cf0 , \cf8 'b'\cf0 , \cf8 'c'\cf0 ];\
+
+\f3\b \cf3 for
+\f1\b0 \cf0  (
+\f3\b \cf3 const
+\f1\b0 \cf0  elem 
+\f3\b \cf3 of
+\f1\b0 \cf0  arr) \{\
+    console.log(elem);\
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 If you want both index and value of each array element, 
+\f1 for-of
+\f0  has got you covered, too, via the new Array method 
+\f1 entries()
+\f0  and destructuring:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 for
+\f1\b0 \cf0  (
+\f3\b \cf3 const
+\f1\b0 \cf0  [index, elem] 
+\f3\b \cf3 of
+\f1\b0 \cf0  arr.entries()) \{\
+    console.log(index\cf4 +\cf8 '. '\cf4 +\cf0 elem);\
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 More information:
+\b0  Chap. \'93{\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_for-of.html#ch_for-of"}}{\fldrslt \cf2 The 
+\f1 for-of
+\f0  loop}}\'94.\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 4.7 Handling parameter default values \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 In ES5, you specify default values for parameters like this:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  foo(x, y) \{\
+    x \cf4 =\cf0  x \cf4 ||\cf0  \cf4 0\cf0 ;\
+    y \cf4 =\cf0  y \cf4 ||\cf0  \cf4 0\cf0 ;\
+    \cf6 \'b7\'b7\'b7\cf0 \
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 ES6 has nicer syntax:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  foo(x\cf4 =0\cf0 , y\cf4 =0\cf0 ) \{\
+    \cf6 \'b7\'b7\'b7\cf0 \
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 An added benefit is that in ES6, a parameter default value is only triggered by 
+\f1 undefined
+\f0 , while it is triggered by any falsy value in the previous ES5 code.\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf0 More information:
+\b0  section \'93{\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_parameter-handling.html#sec_parameter-default-values"}}{\fldrslt \cf2 Parameter default values}}\'94.\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 4.8 Handling named parameters \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 A common way of naming parameters in JavaScript is via object literals (the so-called 
+\i options object pattern
+\i0 ):\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\fs28 \cf0 selectEntries(\{ start\cf4 :\cf0  \cf4 0\cf0 , end\cf4 :\cf0  \cf4 -1\cf0  \});\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 Two advantages of this approach are: Code becomes more self-descriptive and it is easier to omit arbitrary parameters.\
+In ES5, you can implement 
+\f1 selectEntries()
+\f0  as follows:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  selectEntries(options) \{\
+    
+\f3\b \cf3 var
+\f1\b0 \cf0  start \cf4 =\cf0  options.start \cf4 ||\cf0  \cf4 0\cf0 ;\
+    
+\f3\b \cf3 var
+\f1\b0 \cf0  end \cf4 =\cf0  options.end \cf4 ||\cf0  \cf4 -1\cf0 ;\
+    
+\f3\b \cf3 var
+\f1\b0 \cf0  step \cf4 =\cf0  options.step \cf4 ||\cf0  \cf4 1\cf0 ;\
+    \cf6 \'b7\'b7\'b7\cf0 \
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 In ES6, you can use destructuring in parameter definitions and the code becomes simpler:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  selectEntries(\{ start\cf4 =0\cf0 , end\cf4 =-1\cf0 , step\cf4 =1\cf0  \}) \{\
+    \cf6 \'b7\'b7\'b7\cf0 \
+\}\
+\pard\pardeftab720\sl280\sa319\partightenfactor0
+
+\f0\b\fs24 \cf0 4.8.1 Making the parameter optional \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0 \cf0 To make the parameter 
+\f1 options
+\f0  optional in ES5, you\'92d add line A to the code:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  selectEntries(options) \{\
+    options \cf4 =\cf0  options \cf4 ||\cf0  \{\}; 
+\f4\i \cf5 // (A)
+\f1\i0 \cf0 \
+    
+\f3\b \cf3 var
+\f1\b0 \cf0  start \cf4 =\cf0  options.start \cf4 ||\cf0  \cf4 0\cf0 ;\
+    
+\f3\b \cf3 var
+\f1\b0 \cf0  end \cf4 =\cf0  options.end \cf4 ||\cf0  \cf4 -1\cf0 ;\
+    
+\f3\b \cf3 var
+\f1\b0 \cf0  step \cf4 =\cf0  options.step \cf4 ||\cf0  \cf4 1\cf0 ;\
+    \cf6 \'b7\'b7\'b7\cf0 \
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 In ES6 you can specify 
+\f1 \{\}
+\f0  as a parameter default value:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  selectEntries(\{ start\cf4 =0\cf0 , end\cf4 =-1\cf0 , step\cf4 =1\cf0  \} \cf4 =\cf0  \{\}) \{\
+    \cf6 \'b7\'b7\'b7\cf0 \
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 More information:
+\b0  section \'93{\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_parameter-handling.html#sec_named-parameters"}}{\fldrslt \cf2 Simulating named parameters}}\'94.\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 4.9 From 
+\f3 arguments
+\f0  to rest parameters \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 In ES5, if you want a function (or method) to accept an arbitrary number of arguments, you must use the special variable 
+\f1 arguments
+\f0 :\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  logAllArguments() \{\
+    
+\f3\b \cf3 for
+\f1\b0 \cf0  (
+\f3\b \cf3 var
+\f1\b0 \cf0  i\cf4 =0\cf0 ; i \cf4 <\cf0  arguments.length; i\cf4 ++\cf0 ) \{\
+        console.log(arguments[i]);\
+    \}\
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 In ES6, you can declare a rest parameter (
+\f1 args
+\f0  in the example below) via the 
+\f1 ...
+\f0 operator:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  logAllArguments(...args) \{\
+    
+\f3\b \cf3 for
+\f1\b0 \cf0  (
+\f3\b \cf3 const
+\f1\b0 \cf0  arg 
+\f3\b \cf3 of
+\f1\b0 \cf0  args) \{\
+        console.log(arg);\
+    \}\
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 Rest parameters are even nicer if you are only interested in trailing parameters:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  format(pattern, ...args) \{\
+    \cf6 \'b7\'b7\'b7\cf0 \
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 Handling this case in ES5 is clumsy:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  format(pattern) \{\
+    
+\f3\b \cf3 var
+\f1\b0 \cf0  args \cf4 =\cf0  [].slice.call(arguments, \cf4 1\cf0 );\
+    \cf6 \'b7\'b7\'b7\cf0 \
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 Rest parameters make code easier to read: You can tell that a function has a variable number of parameters just by looking at its parameter definitions.\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf0 More information:
+\b0  section \'93{\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_parameter-handling.html#sec_rest-parameters"}}{\fldrslt \cf2 Rest parameters}}\'94.\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 4.10 From 
+\f3 apply()
+\f0  to the spread operator (
+\f3 ...
+\f0 ) \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 In ES5, you turn arrays into parameters via 
+\f1 apply()
+\f0 . ES6 has the spread operator for this purpose.\
+\pard\pardeftab720\sl280\sa319\partightenfactor0
+
+\b \cf0 4.10.1 
+\f3 Math.max()
+\f0  \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f1\b0 \cf0 Math.max()
+\f0  returns the numerically greatest of its arguments. It works for an arbitrary number of arguments, but not for Arrays.\
+ES5 \'96 
+\f1 apply()
+\f0 :\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\fs28 \cf0 > Math.max.apply(Math, [-1, 5, 11, 3])\
+11\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 ES6 \'96 spread operator:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\fs28 \cf0 > Math.max(...[-1, 5, 11, 3])\
+11\
+\pard\pardeftab720\sl280\sa319\partightenfactor0
+
+\f0\b\fs24 \cf0 4.10.2 
+\f3 Array.prototype.push()
+\f0  \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f1\b0 \cf0 Array.prototype.push()
+\f0  appends all of its arguments as elements to its receiver. There is no method that destructively appends an Array to another one.\
+ES5 \'96 
+\f1 apply()
+\f0 :\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 var
+\f1\b0 \cf0  arr1 \cf4 =\cf0  [\cf8 'a'\cf0 , \cf8 'b'\cf0 ];\
+
+\f3\b \cf3 var
+\f1\b0 \cf0  arr2 \cf4 =\cf0  [\cf8 'c'\cf0 , \cf8 'd'\cf0 ];\
+\
+arr1.push.apply(arr1, arr2);\
+    
+\f4\i \cf5 // arr1 is now ['a', 'b', 'c', 'd']
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 ES6 \'96 spread operator:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 const
+\f1\b0 \cf0  arr1 \cf4 =\cf0  [\cf8 'a'\cf0 , \cf8 'b'\cf0 ];\
+
+\f3\b \cf3 const
+\f1\b0 \cf0  arr2 \cf4 =\cf0  [\cf8 'c'\cf0 , \cf8 'd'\cf0 ];\
+\
+arr1.push(...arr2);\
+    
+\f4\i \cf5 // arr1 is now ['a', 'b', 'c', 'd']
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 More information:
+\b0  section \'93{\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_parameter-handling.html#sec_spread-operator"}}{\fldrslt \cf2 The spread operator (
+\f1 ...
+\f0 )}}\'94.\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 4.11 From 
+\f3 concat()
+\f0  to the spread operator (
+\f3 ...
+\f0 ) \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 The spread operator can also (non-destructively) turn the contents of its operand into Array elements. That means that it becomes an alternative to the Array method 
+\f1 concat()
+\f0 .\
+ES5 \'96 
+\f1 concat()
+\f0 :\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 var
+\f1\b0 \cf0  arr1 \cf4 =\cf0  [\cf8 'a'\cf0 , \cf8 'b'\cf0 ];\
+
+\f3\b \cf3 var
+\f1\b0 \cf0  arr2 \cf4 =\cf0  [\cf8 'c'\cf0 ];\
+
+\f3\b \cf3 var
+\f1\b0 \cf0  arr3 \cf4 =\cf0  [\cf8 'd'\cf0 , \cf8 'e'\cf0 ];\
+\
+console.log(arr1.concat(arr2, arr3));\
+    
+\f4\i \cf5 // [ 'a', 'b', 'c', 'd', 'e' ]
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 ES6 \'96 spread operator:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 const
+\f1\b0 \cf0  arr1 \cf4 =\cf0  [\cf8 'a'\cf0 , \cf8 'b'\cf0 ];\
+
+\f3\b \cf3 const
+\f1\b0 \cf0  arr2 \cf4 =\cf0  [\cf8 'c'\cf0 ];\
+
+\f3\b \cf3 const
+\f1\b0 \cf0  arr3 \cf4 =\cf0  [\cf8 'd'\cf0 , \cf8 'e'\cf0 ];\
+\
+console.log([...arr1, ...arr2, ...arr3]);\
+    
+\f4\i \cf5 // [ 'a', 'b', 'c', 'd', 'e' ]
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 More information:
+\b0  section \'93{\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_parameter-handling.html#sec_spread-operator"}}{\fldrslt \cf2 The spread operator (
+\f1 ...
+\f0 )}}\'94.\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 4.12 From function expressions in object literals to method definitions \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 In JavaScript, methods are properties whose values are functions.\
+In ES5 object literals, methods are created like other properties. The property values are provided via function expressions.\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 var
+\f1\b0 \cf0  obj \cf4 =\cf0  \{\
+    foo\cf4 :\cf0  
+\f3\b \cf3 function
+\f1\b0 \cf0  () \{\
+        \cf6 \'b7\'b7\'b7\cf0 \
+    \},\
+    bar\cf4 :\cf0  
+\f3\b \cf3 function
+\f1\b0 \cf0  () \{\
+        
+\f3\b \cf3 this
+\f1\b0 \cf0 .foo();\
+    \}, 
+\f4\i \cf5 // trailing comma is legal in ES5
+\f1\i0 \cf0 \
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 ES6 has 
+\i method definitions
+\i0 , special syntax for creating methods:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 const
+\f1\b0 \cf0  obj \cf4 =\cf0  \{\
+    foo() \{\
+        \cf6 \'b7\'b7\'b7\cf0 \
+    \},\
+    bar() \{\
+        
+\f3\b \cf3 this
+\f1\b0 \cf0 .foo();\
+    \},\
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 More information:
+\b0  section \'93{\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_oop-besides-classes.html#object-literal-method-definitions"}}{\fldrslt \cf2 Method definitions}}\'94.\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 4.13 From constructors to classes \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 ES6 classes are mostly just more convenient syntax for constructor functions.\
+\pard\pardeftab720\sl280\sa319\partightenfactor0
+
+\b \cf0 4.13.1 Base classes \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0 \cf0 In ES5, you implement constructor functions directly:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  Person(name) \{\
+    
+\f3\b \cf3 this
+\f1\b0 \cf0 .name \cf4 =\cf0  name;\
+\}\
+Person.prototype.describe \cf4 =\cf0  
+\f3\b \cf3 function
+\f1\b0 \cf0  () \{\
+    
+\f3\b \cf3 return
+\f1\b0 \cf0  \cf8 'Person called '\cf4 +
+\f3\b \cf3 this
+\f1\b0 \cf0 .name;\
+\};\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 In ES6, classes provide slightly more convenient syntax for constructor functions:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 class
+\f1\b0 \cf0  Person \{\
+    constructor(name) \{\
+        
+\f3\b \cf3 this
+\f1\b0 \cf0 .name \cf4 =\cf0  name;\
+    \}\
+    describe() \{\
+        
+\f3\b \cf3 return
+\f1\b0 \cf0  \cf8 'Person called '\cf4 +
+\f3\b \cf3 this
+\f1\b0 \cf0 .name;\
+    \}\
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 Note the compact syntax for method definitions \'96 no keyword 
+\f1 function
+\f0  needed. Also note that there are no commas between the parts of a class.\
+\pard\pardeftab720\sl280\sa319\partightenfactor0
+
+\b \cf0 4.13.2 Derived classes \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0 \cf0 Subclassing is complicated in ES5, especially referring to super-constructors and super-properties. This is the canonical way of creating a sub-constructor 
+\f1 Employee
+\f0  of 
+\f1 Person
+\f0 :\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  Employee(name, title) \{\
+    Person.call(
+\f3\b \cf3 this
+\f1\b0 \cf0 , name); 
+\f4\i \cf5 // super(name)
+\f1\i0 \cf0 \
+    
+\f3\b \cf3 this
+\f1\b0 \cf0 .title \cf4 =\cf0  title;\
+\}\
+Employee.prototype \cf4 =\cf0  \cf3 Object\cf0 .create(Person.prototype);\
+Employee.prototype.constructor \cf4 =\cf0  Employee;\
+Employee.prototype.describe \cf4 =\cf0  
+\f3\b \cf3 function
+\f1\b0 \cf0  () \{\
+    
+\f3\b \cf3 return
+\f1\b0 \cf0  Person.prototype.describe.call(
+\f3\b \cf3 this
+\f1\b0 \cf0 ) 
+\f4\i \cf5 // super.describe()
+\f1\i0 \cf0 \
+           \cf4 +\cf0  \cf8 ' ('\cf0  \cf4 +\cf0  
+\f3\b \cf3 this
+\f1\b0 \cf0 .title \cf4 +\cf0  \cf8 ')'\cf0 ;\
+\};\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 ES6 has built-in support for subclassing, via the 
+\f1 extends
+\f0  clause:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 class
+\f1\b0 \cf0  Employee 
+\f3\b \cf3 extends
+\f1\b0 \cf0  Person \{\
+    constructor(name, title) \{\
+        
+\f3\b \cf3 super
+\f1\b0 \cf0 (name);\
+        
+\f3\b \cf3 this
+\f1\b0 \cf0 .title \cf4 =\cf0  title;\
+    \}\
+    describe() \{\
+        
+\f3\b \cf3 return
+\f1\b0 \cf0  
+\f3\b \cf3 super
+\f1\b0 \cf0 .describe() \cf4 +\cf0  \cf8 ' ('\cf0  \cf4 +\cf0  
+\f3\b \cf3 this
+\f1\b0 \cf0 .title \cf4 +\cf0  \cf8 ')'\cf0 ;\
+    \}\
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 More information:
+\b0  chapter \'93{\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_classes.html#ch_classes"}}{\fldrslt \cf2 Classes}}\'94.\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 4.14 From custom error constructors to subclasses of 
+\f3 Error
+\f0  \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 In ES5, it is impossible to subclass the built-in constructor for exceptions, 
+\f1 Error
+\f0 . The following code shows a work-around that gives the constructor 
+\f1 MyError
+\f0  important features such as a stack trace:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  MyError() \{\
+    
+\f4\i \cf5 // Use Error as a function
+\f1\i0 \cf0 \
+    
+\f3\b \cf3 var
+\f1\b0 \cf0  superInstance \cf4 =\cf0  \cf3 Error\cf0 .apply(
+\f3\b \cf3 null
+\f1\b0 \cf0 , arguments);\
+    copyOwnPropertiesFrom(
+\f3\b \cf3 this
+\f1\b0 \cf0 , superInstance);\
+\}\
+MyError.prototype \cf4 =\cf0  \cf3 Object\cf0 .create(\cf3 Error\cf0 .prototype);\
+MyError.prototype.constructor \cf4 =\cf0  MyError;\
+\
+
+\f3\b \cf3 function
+\f1\b0 \cf0  copyOwnPropertiesFrom(target, source) \{\
+    \cf3 Object\cf0 .getOwnPropertyNames(source)\
+    .forEach(
+\f3\b \cf3 function
+\f1\b0 \cf0 (propKey) \{\
+        
+\f3\b \cf3 var
+\f1\b0 \cf0  desc \cf4 =\cf0  \cf3 Object\cf0 .getOwnPropertyDescriptor(source, propKey);\
+        \cf3 Object\cf0 .defineProperty(target, propKey, desc);\
+    \});\
+    
+\f3\b \cf3 return
+\f1\b0 \cf0  target;\
+\};\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 In ES6, all built-in constructors can be subclassed, which is why the following code achieves what the ES5 code can only simulate:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 class
+\f1\b0 \cf0  MyError 
+\f3\b \cf3 extends
+\f1\b0 \cf0  \cf3 Error\cf0  \{\
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 More information:
+\b0  section \'93{\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_classes.html#subclassing-builtin-constructors"}}{\fldrslt \cf2 Subclassing built-in constructors}}\'94.\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 4.15 From objects to Maps \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 Using the language construct 
+\i object
+\i0  as a map from strings to arbitrary values (a data structure) has always been a makeshift solution in JavaScript. The safest way to do so is by creating an object whose prototype is 
+\f1 null
+\f0 . Then you still have to ensure that no key is ever the string 
+\f1 '__proto__'
+\f0 , because that property key triggers special functionality in many JavaScript engines.\
+The following ES5 code contains the function 
+\f1 countWords
+\f0  that uses the object 
+\f1 dict
+\f0 as a map:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 var
+\f1\b0 \cf0  dict \cf4 =\cf0  \cf3 Object\cf0 .create(
+\f3\b \cf3 null
+\f1\b0 \cf0 );\
+
+\f3\b \cf3 function
+\f1\b0 \cf0  countWords(word) \{\
+    
+\f3\b \cf3 var
+\f1\b0 \cf0  escapedWord \cf4 =\cf0  escapeKey(word);\
+    
+\f3\b \cf3 if
+\f1\b0 \cf0  (escapedWord 
+\f3\b \cf3 in
+\f1\b0 \cf0  dict) \{\
+        dict[escapedWord]\cf4 ++\cf0 ;\
+    \} 
+\f3\b \cf3 else
+\f1\b0 \cf0  \{\
+        dict[escapedWord] \cf4 =\cf0  \cf4 1\cf0 ;\
+    \}\
+\}\
+
+\f3\b \cf3 function
+\f1\b0 \cf0  escapeKey(key) \{\
+    
+\f3\b \cf3 if
+\f1\b0 \cf0  (key.indexOf(\cf8 '__proto__'\cf0 ) \cf4 ===\cf0  \cf4 0\cf0 ) \{\
+        
+\f3\b \cf3 return
+\f1\b0 \cf0  key\cf4 +\cf8 '%'\cf0 ;\
+    \} 
+\f3\b \cf3 else
+\f1\b0 \cf0  \{\
+        
+\f3\b \cf3 return
+\f1\b0 \cf0  key;\
+    \}\
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 In ES6, you can use the built-in data structure 
+\f1 Map
+\f0  and don\'92t have to escape keys. As a downside, incrementing values inside Maps is less convenient.\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 const
+\f1\b0 \cf0  map \cf4 =\cf0  
+\f3\b \cf3 new
+\f1\b0 \cf0  Map();\
+
+\f3\b \cf3 function
+\f1\b0 \cf0  countWords(word) \{\
+    
+\f3\b \cf3 const
+\f1\b0 \cf0  count \cf4 =\cf0  map.get(word) \cf4 ||\cf0  \cf4 0\cf0 ;\
+    map.set(word, count \cf4 +\cf0  \cf4 1\cf0 );\
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 Another benefit of Maps is that you can use arbitrary values as keys, not just strings.\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf0 More information:
+\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\partightenfactor0
+\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+Section \'93{\field{\*\fldinst{HYPERLINK "http://speakingjs.com/es5/ch17.html#dict_pattern"}}{\fldrslt \cf2 The dict Pattern: Objects Without Prototypes Are Better Maps}}\'94 in \'93Speaking JavaScript\'94\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+Chapter \'93{\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_maps-sets.html#ch_maps-sets"}}{\fldrslt \cf2 Maps and Sets}}\'94\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 4.16 New string methods \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 The ECMAScript 6 standard library provides several new methods for strings.\
+From 
+\f1 indexOf
+\f0  to 
+\f1 startsWith
+\f0 :\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 if
+\f1\b0 \cf0  (str.indexOf(\cf8 'x'\cf0 ) \cf4 ===\cf0  \cf4 0\cf0 ) \{\} 
+\f4\i \cf5 // ES5
+\f1\i0 \cf0 \
+
+\f3\b \cf3 if
+\f1\b0 \cf0  (str.startsWith(\cf8 'x'\cf0 )) \{\} 
+\f4\i \cf5 // ES6
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 From 
+\f1 indexOf
+\f0  to 
+\f1 endsWith
+\f0 :\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 function
+\f1\b0 \cf0  endsWith(str, suffix) \{ 
+\f4\i \cf5 // ES5
+\f1\i0 \cf0 \
+  
+\f3\b \cf3 var
+\f1\b0 \cf0  index \cf4 =\cf0  str.indexOf(suffix);\
+  
+\f3\b \cf3 return
+\f1\b0 \cf0  index \cf4 >=\cf0  \cf4 0\cf0 \
+    \cf4 &&\cf0  index \cf4 ===\cf0  str.length\cf4 -\cf0 suffix.length;\
+\}\
+str.endsWith(suffix); 
+\f4\i \cf5 // ES6
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 From 
+\f1 indexOf
+\f0  to 
+\f1 includes
+\f0 :\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 if
+\f1\b0 \cf0  (str.indexOf(\cf8 'x'\cf0 ) \cf4 >=\cf0  \cf4 0\cf0 ) \{\} 
+\f4\i \cf5 // ES5
+\f1\i0 \cf0 \
+
+\f3\b \cf3 if
+\f1\b0 \cf0  (str.includes(\cf8 'x'\cf0 )) \{\} 
+\f4\i \cf5 // ES6
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 From 
+\f1 join
+\f0  to 
+\f1 repeat
+\f0  (the ES5 way of repeating a string is more of a hack):\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 new
+\f1\b0 \cf0  \cf3 Array\cf0 (\cf4 3+1\cf0 ).join(\cf8 '#'\cf0 ) 
+\f4\i \cf5 // ES5
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf8 '#'\cf0 .repeat(\cf4 3\cf0 ) 
+\f4\i \cf5 // ES6
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 More information:
+\b0  Chapter \'93{\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_strings.html#ch_strings"}}{\fldrslt \cf2 New string features}}\'94\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 4.17 New Array methods \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 There are also several new Array methods in ES6.\
+\pard\pardeftab720\sl280\sa319\partightenfactor0
+
+\b \cf0 4.17.1 From 
+\f3 Array.prototype.indexOf
+\f0  to 
+\f3 Array.prototype.findIndex
+\f0  \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0 \cf0 The latter can be used to find 
+\f1 NaN
+\f0 , which the former can\'92t detect:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 const
+\f1\b0 \cf0  arr \cf4 =\cf0  [\cf8 'a'\cf0 , 
+\f3\b \cf3 NaN
+\f1\b0 \cf0 ];\
+\
+arr.indexOf(
+\f3\b \cf3 NaN
+\f1\b0 \cf0 ); 
+\f4\i \cf5 // -1
+\f1\i0 \cf0 \
+arr.findIndex(x \cf4 =>\cf0  \cf3 Number\cf0 .\cf3 isNaN\cf0 (x)); 
+\f4\i \cf5 // 1
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 As an aside, the new 
+\f1 Number.isNaN()
+\f0  provides a safe way to detect 
+\f1 NaN
+\f0  (because it doesn\'92t coerce non-numbers to numbers):\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\fs28 \cf0 > isNaN('abc')\
+true\
+> Number.isNaN('abc')\
+false\
+\pard\pardeftab720\sl280\sa319\partightenfactor0
+
+\f0\b\fs24 \cf0 4.17.2 From 
+\f3 Array.prototype.slice()
+\f0  to 
+\f3 Array.from()
+\f0  or the spread operator \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0 \cf0 In ES5, 
+\f1 Array.prototype.slice()
+\f0  was used to convert Array-like objects to Arrays. In ES6, you have 
+\f1 Array.from()
+\f0 :\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 var
+\f1\b0 \cf0  arr1 \cf4 =\cf0  \cf3 Array\cf0 .prototype.slice.call(arguments); 
+\f4\i \cf5 // ES5
+\f1\i0 \cf0 \
+
+\f3\b \cf3 const
+\f1\b0 \cf0  arr2 \cf4 =\cf0  \cf3 Array\cf0 .from(arguments); 
+\f4\i \cf5 // ES6
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 If a value is iterable (as all Array-like DOM data structure are by now), you can also use the spread operator (
+\f1 ...
+\f0 ) to convert it to an Array:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 const
+\f1\b0 \cf0  arr1 \cf4 =\cf0  [...\cf8 'abc'\cf0 ];\
+    
+\f4\i \cf5 // ['a', 'b', 'c']
+\f1\i0 \cf0 \
+
+\f3\b \cf3 const
+\f1\b0 \cf0  arr2 \cf4 =\cf0  [...
+\f3\b \cf3 new
+\f1\b0 \cf0  Set().add(\cf8 'a'\cf0 ).add(\cf8 'b'\cf0 )];\
+    
+\f4\i \cf5 // ['a', 'b']
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa319\partightenfactor0
+
+\f0\b\fs24 \cf0 4.17.3 From 
+\f3 apply()
+\f0  to 
+\f3 Array.prototype.fill()
+\f0  \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0 \cf0 In ES5, you can use 
+\f1 apply()
+\f0 , as a hack, to create in Array of arbitrary length that is filled with 
+\f1 undefined
+\f0 :\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f4\i\fs28 \cf5 // Same as Array(undefined, undefined)
+\f1\i0 \cf0 \
+
+\f3\b \cf3 var
+\f1\b0 \cf0  arr1 \cf4 =\cf0  \cf3 Array\cf0 .apply(
+\f3\b \cf3 null
+\f1\b0 \cf0 , 
+\f3\b \cf3 new
+\f1\b0 \cf0  \cf3 Array\cf0 (\cf4 2\cf0 ));\
+    
+\f4\i \cf5 // [undefined, undefined]
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 In ES6, 
+\f1 fill()
+\f0  is a simpler alternative:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f3\b\fs28 \cf3 const
+\f1\b0 \cf0  arr2 \cf4 =\cf0  
+\f3\b \cf3 new
+\f1\b0 \cf0  \cf3 Array\cf0 (\cf4 2\cf0 ).fill(
+\f3\b \cf3 undefined
+\f1\b0 \cf0 );\
+    
+\f4\i \cf5 // [undefined, undefined]
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\fs24 \cf0 fill()
+\f0  is even more convenient if you want to create an Array that is filled with an arbitrary value:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f4\i\fs28 \cf5 // ES5
+\f1\i0 \cf0 \
+
+\f3\b \cf3 var
+\f1\b0 \cf0  arr3 \cf4 =\cf0  \cf3 Array\cf0 .apply(
+\f3\b \cf3 null
+\f1\b0 \cf0 , 
+\f3\b \cf3 new
+\f1\b0 \cf0  \cf3 Array\cf0 (\cf4 2\cf0 ))\
+    .map(
+\f3\b \cf3 function
+\f1\b0 \cf0  (x) \{ 
+\f3\b \cf3 return
+\f1\b0 \cf0  \cf8 'x'\cf0  \});\
+    
+\f4\i \cf5 // ['x', 'x']
+\f1\i0 \cf0 \
+\
+
+\f4\i \cf5 // ES6
+\f1\i0 \cf0 \
+
+\f3\b \cf3 const
+\f1\b0 \cf0  arr4 \cf4 =\cf0  
+\f3\b \cf3 new
+\f1\b0 \cf0  \cf3 Array\cf0 (\cf4 2\cf0 ).fill(\cf8 'x'\cf0 );\
+    
+\f4\i \cf5 // ['x', 'x']
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\fs24 \cf0 fill()
+\f0  replaces all Array elements with the given value. Holes are treated as if they were elements.\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf0 More information:
+\b0  Sect. \'93{\field{\*\fldinst{HYPERLINK "http://exploringjs.com/es6/ch_arrays.html#sec_creating-filled-arrays"}}{\fldrslt \cf2 Creating Arrays filled with values}}\'94\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+
+\b\fs28 \cf0 4.18 From CommonJS modules to ES6 modules \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 Even in ES5, module systems based on either AMD syntax or CommonJS syntax have mostly replaced hand-written solutions such as {\field{\*\fldinst{HYPERLINK "http://christianheilmann.com/2007/08/22/again-with-the-module-pattern-reveal-something-to-the-world/"}}{\fldrslt \cf2 the revealing module pattern}}.\
+ES6 has built-in support for modules. Alas, no JavaScript engine supports them natively, yet. But tools such as browserify, webpack or jspm let you use ES6 syntax to create modules, making the code you write future-proof.\
+\pard\pardeftab720\sl280\sa319\partightenfactor0
+
+\b \cf0 4.18.1 Multiple exports \
+\pard\pardeftab720\sl240\sa332\partightenfactor0
+
+\fs20 \cf0 4.18.1.1 Multiple exports in CommonJS \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 In CommonJS, you export multiple entities as follows:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f4\i\fs28 \cf5 //------ lib.js ------
+\f1\i0 \cf0 \
+
+\f3\b \cf3 var
+\f1\b0 \cf0  sqrt \cf4 =\cf0  \cf3 Math\cf0 .sqrt;\
+
+\f3\b \cf3 function
+\f1\b0 \cf0  square(x) \{\
+    
+\f3\b \cf3 return
+\f1\b0 \cf0  x \cf4 *\cf0  x;\
+\}\
+
+\f3\b \cf3 function
+\f1\b0 \cf0  diag(x, y) \{\
+    
+\f3\b \cf3 return
+\f1\b0 \cf0  sqrt(square(x) \cf4 +\cf0  square(y));\
+\}\
+module.exports \cf4 =\cf0  \{\
+    sqrt\cf4 :\cf0  sqrt,\
+    square\cf4 :\cf0  square,\
+    diag\cf4 :\cf0  diag,\
+\};\
+\
+
+\f4\i \cf5 //------ main1.js ------
+\f1\i0 \cf0 \
+
+\f3\b \cf3 var
+\f1\b0 \cf0  square \cf4 =\cf0  require(\cf8 'lib'\cf0 ).square;\
+
+\f3\b \cf3 var
+\f1\b0 \cf0  diag \cf4 =\cf0  require(\cf8 'lib'\cf0 ).diag;\
+\
+console.log(square(\cf4 11\cf0 )); 
+\f4\i \cf5 // 121
+\f1\i0 \cf0 \
+console.log(diag(\cf4 4\cf0 , \cf4 3\cf0 )); 
+\f4\i \cf5 // 5
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 Alternatively, you can import the whole module as an object and access 
+\f1 square
+\f0  and 
+\f1 diag
+\f0  via it:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f4\i\fs28 \cf5 //------ main2.js ------
+\f1\i0 \cf0 \
+
+\f3\b \cf3 var
+\f1\b0 \cf0  lib \cf4 =\cf0  require(\cf8 'lib'\cf0 );\
+console.log(lib.square(\cf4 11\cf0 )); 
+\f4\i \cf5 // 121
+\f1\i0 \cf0 \
+console.log(lib.diag(\cf4 4\cf0 , \cf4 3\cf0 )); 
+\f4\i \cf5 // 5
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl240\sa332\partightenfactor0
+
+\f0\b\fs20 \cf0 4.18.1.2 Multiple exports in ES6 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 In ES6, multiple exports are called 
+\i named exports
+\i0  and handled like this:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f4\i\fs28 \cf5 //------ lib.js ------
+\f1\i0 \cf0 \
+
+\f3\b \cf3 export
+\f1\b0 \cf0  
+\f3\b \cf3 const
+\f1\b0 \cf0  sqrt \cf4 =\cf0  \cf3 Math\cf0 .sqrt;\
+
+\f3\b \cf3 export
+\f1\b0 \cf0  
+\f3\b \cf3 function
+\f1\b0 \cf0  square(x) \{\
+    
+\f3\b \cf3 return
+\f1\b0 \cf0  x \cf4 *\cf0  x;\
+\}\
+
+\f3\b \cf3 export
+\f1\b0 \cf0  
+\f3\b \cf3 function
+\f1\b0 \cf0  diag(x, y) \{\
+    
+\f3\b \cf3 return
+\f1\b0 \cf0  sqrt(square(x) \cf4 +\cf0  square(y));\
+\}\
+\
+
+\f4\i \cf5 //------ main1.js ------
+\f1\i0 \cf0 \
+
+\f3\b \cf3 import
+\f1\b0 \cf0  \{ square, diag \} from \cf8 'lib'\cf0 ;\
+console.log(square(\cf4 11\cf0 )); 
+\f4\i \cf5 // 121
+\f1\i0 \cf0 \
+console.log(diag(\cf4 4\cf0 , \cf4 3\cf0 )); 
+\f4\i \cf5 // 5
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf0 The syntax for importing modules as objects looks as follows (line A):\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f4\i\fs28 \cf5 //------ main2.js ------
+\f1\i0 \cf0 \
+
+\f3\b \cf3 import
+\f1\b0 \cf0  \cf4 *\cf0  as lib from \cf8 'lib'\cf0 ; 
+\f4\i \cf5 // (A)
+\f1\i0 \cf0 \
+console.log(lib.square(\cf4 11\cf0 )); 
+\f4\i \cf5 // 121
+\f1\i0 \cf0 \
+console.log(lib.diag(\cf4 4\cf0 , \cf4 3\cf0 )); 
+\f4\i \cf5 // 5
+\f1\i0 \cf0 \
+\pard\pardeftab720\sl280\sa319\partightenfactor0
+
+\f0\b\fs24 \cf0 4.18.2 Single exports \
+\pard\pardeftab720\sl240\sa332\partightenfactor0
+
+\fs20 \cf0 4.18.2.1 Single exports in CommonJS \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 Node.js extends CommonJS and lets you export single values from modules, via 
+\f1 module.exports
+\f0 :\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f4\i\fs28 \cf5 //------ myFunc.js ------
+\f1\i0 \cf0 \
+module.exports \cf4 =\cf0  
+\f3\b \cf3 function
+\f1\b0 \cf0  () \{ \cf6 \'b7\'b7\'b7\cf0  \};\
+\
+
+\f4\i \cf5 //------ main1.js ------
+\f1\i0 \cf0 \
+
+\f3\b \cf3 var
+\f1\b0 \cf0  myFunc \cf4 =\cf0  require(\cf8 'myFunc'\cf0 );\
+myFunc();\
+\pard\pardeftab720\sl240\sa332\partightenfactor0
+
+\f0\b\fs20 \cf0 4.18.2.2 Single exports in ES6 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf0 In ES6, the same thing is done via a so-called 
+\i default export
+\i0  (declared via 
+\f1 export default
+\f0 ):\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f4\i\fs28 \cf5 //------ myFunc.js ------
+\f1\i0 \cf0 \
+
+\f3\b \cf3 export
+\f1\b0 \cf0  
+\f3\b \cf3 default
+\f1\b0 \cf0  
+\f3\b \cf3 function
+\f1\b0 \cf0  () \{ \cf6 \'b7\'b7\'b7\cf0  \} 
+\f4\i \cf5 // no semicolon!
+\f1\i0 \cf0 \
+\
+
+\f4\i \cf5 //------ main1.js ------
+\f1\i0 \cf0 \
+
+\f3\b \cf3 import
+\f1\b0 \cf0  myFunc from \cf8 'myFunc'\cf0 ;\
+myFunc();\
+}
