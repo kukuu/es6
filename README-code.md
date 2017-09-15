@@ -47,7 +47,7 @@ func(false);
 
 ```
 
-```
+
 result: 3
 
 That means that you can’t blindly replace var with let or const in existing code; you have to be careful during refactoring.
@@ -81,8 +81,9 @@ In ECMAScript 6, you can simply use a block and a let declaration (or a const de
 { 
     let tmp = ···;
     ···
-}  
-,,,
+} 
+
+```
 
 console.log(tmp); 
 
@@ -197,6 +198,7 @@ In ES5, such callbacks are relatively verbose:
 ```
 var arr = [1, 2, 3];
 var squares = arr.map(function (x) { return x * x });
+
 ```
 
 
@@ -238,7 +240,7 @@ const [, year, month, day] =
     /^(\d\d\d\d)-(\d\d)-(\d\d)$/
     .exec('2999-12-31');
 
-``
+```
 
 The empty slot at the beginning of the Array pattern skips the Array element at index zero.
 
@@ -284,9 +286,7 @@ console.log(writable, configurable);
 ```
 { writable: writable, configurable: configurable }
 
-,,,
-
-
+```
 
 
 10. From for to forEach() to for-of 
@@ -344,6 +344,8 @@ function foo(x, y) {
     ···
 }
 
+```
+
 ES6 has nicer syntax:
 
 ```
@@ -355,7 +357,6 @@ function foo(x=0, y=0) {
 
 An added benefit is that in ES6, a parameter default value is only triggered by undefined, while it is triggered by any falsy value in the previous ES5 code.
 
-More information: section “Parameter default values”.
 
 12. Handling named parameters 
 
@@ -384,6 +385,7 @@ In ES6, you can use destructuring in parameter definitions and the code becomes 
 function selectEntries({ start=0, end=-1, step=1 }) {
     ···
 }
+
 ```
 
 13. Making the parameter optional 
@@ -398,6 +400,7 @@ function selectEntries(options) {
     var step = options.step || 1;
     ···
 }
+
 ```
 
 In ES6 you can specify {} as a parameter default value:
@@ -445,10 +448,14 @@ function format(pattern, ...args) {
 
 Handling this case in ES5 is clumsy:
 
+
+```
 function format(pattern) {
     var args = [].slice.call(arguments, 1);
     ···
 }
+
+```
 Rest parameters make code easier to read: You can tell that a function has a variable number of parameters just by looking at its parameter definitions.
 
 
@@ -532,6 +539,8 @@ const arr3 = ['d', 'e'];
 console.log([...arr1, ...arr2, ...arr3]);
 
 arr1.push(...arr2, ...arr3)
+
+```
     // [ 'a', 'b', 'c', 'd', 'e' ]
 
 
@@ -577,7 +586,7 @@ Base classes
 
 In ES5, you implement constructor functions directly:
 
-``
+```
 function Person(name) {
     this.name = name;
 }
