@@ -648,3 +648,312 @@ class Employee extends Person {
 
 ```
 
+
+20. From custom error constructors to subclasses of Error 
+
+In ES5, it is impossible to subclass the built-in constructor for exceptions, Error. The following code shows a work-around that gives the constructor MyError important features such as a stack trace:
+
+```
+function MyError() {
+    // Use Error as a function
+    var superInstance = Error.apply(null, arguments);
+    copyOwnPropertiesFrom(this, superInstance);
+}
+MyError.prototype = Object.create(Error.prototype);
+MyError.prototype.constructor = MyError;
+
+function copyOwnPropertiesFrom(target, source) {
+    Object.getOwnPropertyNames(source)
+    .forEach(function(propKey) {
+        var desc = Object.getOwnPropertyDescriptor(source, propKey);
+        Object.defineProperty(target, propKey, desc);
+    });
+    return target;
+};
+
+```
+
+In ES6, all built-in constructors can be subclassed, which is why the following code achieves what the ES5 code can only simulate:
+
+```
+class MyError extends Error {
+}
+
+```
+
+
+
+21. From objects to Maps 
+
+Using the language construct object as a map from strings to arbitrary values (a data structure) has always been a makeshift solution in JavaScript. The safest way to do so is by creating an object whose prototype is null. Then you still have to ensure that no key is ever the string '__proto__', because that property key triggers special functionality in many JavaScript engines.
+
+The following ES5 code contains the function countWords that uses the object dict as a map:
+
+
+```
+
+var dict = Object.create(null);
+function countWords(word) {
+    var escapedWord = escapeKey(word);
+    if (escapedWord in dict) {
+        dict[escapedWord]++;
+    } else {
+        dict[escapedWord] = 1;
+    }
+}
+function escapeKey(key) {
+    if (key.indexOf('__proto__') === 0) {
+        return key+'%';
+    } else {
+        return key;
+    }
+}
+
+```
+
+In ES6, you can use the built-in data structure Map and don’t have to escape keys. As a downside, incrementing values inside Maps is less convenient.
+
+```
+const map = new Map();
+function countWords(word) {
+    const count = map.get(word) || 0;
+    map.set(word, count + 1);
+}
+
+```
+Another benefit of Maps is that you can use arbitrary values as keys, not just strings.
+
+
+
+
+22. New string methods 
+
+The ECMAScript 6 standard library provides several new methods for strings.
+
+From indexOf to startsWith:
+
+// ES5
+
+```
+if (str.indexOf('x') === 0) {} 
+
+```
+
+// ES6
+
+```
+if (str.startsWith('x')) {} 
+
+```
+From indexOf to endsWith:
+
+
+// ES5
+
+```
+function endsWith(str, suffix) { 
+  var index = str.indexOf(suffix);
+  return index >= 0
+    && index === str.length-suffix.length;
+}
+
+```
+// ES6
+
+```
+str.endsWith(suffix); 
+
+```
+
+From indexOf to includes:
+
+// ES5
+
+```
+if (str.indexOf('x') >= 0) {}
+
+```
+
+ // ES6
+
+```
+if (str.includes('x')) {} 
+
+```
+
+From join to repeat (the ES5 way of repeating a string is more of a hack):
+
+// ES5
+
+```
+new Array(3+1).join('#') 
+
+```
+
+// ES6
+
+```
+'#'.repeat(3)
+
+```
+
+24. New Array methods 
+
+There are also several new Array methods in ES6.
+
+From Array.prototype.indexOf to Array.prototype.findIndex 
+
+The latter can be used to find NaN, which the former can’t detect:
+
+ // -1
+```
+const arr = ['a', NaN];
+
+arr.indexOf(NaN);
+
+```
+
+// 1
+
+```
+arr.findIndex(x => Number.isNaN(x)); 
+```
+
+As an aside, the new Number.isNaN() provides a safe way to detect NaN (because it doesn’t coerce non-numbers to numbers):
+
+```
+> isNaN('abc')
+true
+
+> Number.isNaN('abc')
+false
+
+```
+
+
+
+25. From Array.prototype.slice() to Array.from() or the spread operator 
+
+In ES5, Array.prototype.slice() was used to convert Array-like objects to Arrays. In ES6, you have Array.from():
+
+
+ // ES5
+
+ ```
+var arr1 = Array.prototype.slice.call(arguments);
+
+```
+// ES6
+
+```
+const arr2 = Array.from(arguments); 
+
+```
+If a value is iterable (as all Array-like DOM data structure are by now), you can also use the spread operator (...) to convert it to an Array:
+
+```
+const arr1 = [...'abc'];
+
+```
+    // ['a', 'b', 'c']
+
+```
+const arr2 = [...new Set().add('a').add('b')];
+```
+    // ['a', 'b']
+
+
+26. From apply() to Array.prototype.fill() 
+
+In ES5, you can use apply(), as a hack, to create in Array of arbitrary length that is filled with undefined:
+
+// Same as Array(undefined, undefined)
+
+```
+var arr1 = Array.apply(null, new Array(2));
+```
+    // [undefined, undefined]
+
+```
+In ES6, fill() is a simpler alternative:
+
+```
+const arr2 = new Array(2).fill(undefined);
+
+```
+    // [undefined, undefined]
+
+fill() is even more convenient if you want to create an Array that is filled with an arbitrary value:
+
+// ES5
+
+```
+var arr3 = Array.apply(null, new Array(2))
+    .map(function (x) { return 'x' });
+```
+    // ['x', 'x']
+
+
+// ES6
+
+```
+const arr4 = new Array(2).fill('x');
+
+```
+    // ['x', 'x']
+
+fill() replaces all Array elements with the given value. Holes are treated as if they were elements.
+
+
+
+27. From CommonJS modules to ES6 modules 
+
+Even in ES5, module systems based on either AMD syntax or CommonJS syntax have mostly replaced hand-written solutions such as the revealing module pattern.
+
+ES6 has built-in support for modules. Alas, no JavaScript engine supports them natively, yet. But tools such as browserify, webpack or jspm let you use ES6 syntax to create modules, making the code you write future-proof.
+
+
+
+28. Multiple exports in CommonJS 
+
+In CommonJS, you export multiple entities as follows:
+
+//------ lib.js ------
+
+```
+var sqrt = Math.sqrt;
+function square(x) {
+    return x * x;
+}
+function diag(x, y) {
+    return sqrt(square(x) + square(y));
+}
+module.exports = {
+    sqrt: sqrt,
+    square: square,
+    diag: diag,
+};
+
+```
+
+//------ main1.js ------
+
+```
+var square = require('lib').square;
+var diag = require('lib').diag;
+
+console.log(square(11)); // 121
+console.log(diag(4, 3)); // 5
+
+```
+
+Alternatively, you can import the whole module as an object and access square and diag via it:
+
+//------ main2.js ------
+
+```
+var lib = require('lib');
+console.log(lib.square(11)); // 121
+console.log(lib.diag(4, 3)); // 5
+
+```
