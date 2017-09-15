@@ -871,10 +871,11 @@ In ES5, you can use apply(), as a hack, to create in Array of arbitrary length t
 
 ```
 var arr1 = Array.apply(null, new Array(2));
+
 ```
     // [undefined, undefined]
 
-```
+
 In ES6, fill() is a simpler alternative:
 
 ```
