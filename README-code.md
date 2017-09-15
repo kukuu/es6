@@ -958,3 +958,82 @@ console.log(lib.square(11)); // 121
 console.log(lib.diag(4, 3)); // 5
 
 ```
+
+
+In ES6, multiple exports are called named exports and handled like this:
+
+//------ lib.js ------
+
+```
+export const sqrt = Math.sqrt;
+export function square(x) {
+    return x * x;
+}
+export function diag(x, y) {
+    return sqrt(square(x) + square(y));
+}
+
+```
+
+//------ main1.js ------
+
+```
+import { square, diag } from 'lib';
+console.log(square(11)); // 121
+console.log(diag(4, 3)); // 5
+
+```
+
+
+The syntax for importing modules as objects looks as follows (line A):
+
+//------ main2.js ------
+
+```
+import * as lib from 'lib'; // (A)
+console.log(lib.square(11)); // 121
+console.log(lib.diag(4, 3)); // 5
+
+```
+
+
+30. Single exports in CommonJS 
+
+Node.js extends CommonJS and lets you export single values from modules, via module.exports:
+
+//------ myFunc.js ------
+
+```
+module.exports = function () { ··· };
+
+```
+
+
+//------ main1.js ------
+
+```
+var myFunc = require('myFunc');
+myFunc();
+```
+
+
+31. Single exports in ES6 
+
+In ES6, the same thing is done via a so-called default export (declared via export default):
+
+//------ myFunc.js ------
+
+```
+export default function () { ··· } // no semicolon!
+
+```
+
+//------ main1.js ------
+
+```
+import myFunc from 'myFunc';
+myFunc();
+
+```
+
+
