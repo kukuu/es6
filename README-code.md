@@ -428,7 +428,7 @@ function logAllArguments() {
 
 In ES6, you can declare a rest parameter (args in the example below) via the ... operator:
 
-````
+```
 function logAllArguments(...args) {
     for (const arg of args) {
         console.log(arg);
@@ -494,6 +494,7 @@ var arr1 = ['a', 'b'];
 var arr2 = ['c', 'd'];
 
 arr1.push.apply(arr1, arr2);
+
 ```
 
 // arr1 is now ['a', 'b', 'c', 'd']
@@ -559,6 +560,7 @@ var obj = {
         this.foo();
     }, // trailing comma is legal in ES5
 }
+
 ```
 
 ES6 has method definitions, special syntax for creating methods:
